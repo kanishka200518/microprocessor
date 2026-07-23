@@ -36,7 +36,7 @@ module reg_file(
     end
 
     // Asynchronous read
-    assign rd1 = (a1 != 5'b0) ? rf[a1] : 32'b0;
-    assign rd2 = (a2 != 5'b0) ? rf[a2] : 32'b0;
+     assign rd1 = (a1 == 5'b0) ?32'b0 : (we && a1==a3)?wd3:rf[a1];
+    assign rd2 = (a2 == 5'b0) ?32'b0 : (we && a2==a3)?wd3:rf[a2];
 endmodule
    
