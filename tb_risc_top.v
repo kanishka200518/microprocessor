@@ -51,7 +51,7 @@ module tb_risc_top();
         reset = 0;
 
         // Run for 200ns to observe several instructions
-        #200;
+        #400;
 
         // Finish simulation
         $stop;
